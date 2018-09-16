@@ -1,0 +1,321 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+@media screen and (max-width: 400px) {
+
+    .deck {
+        width:220px;
+        height:220px;
+}
+.deck .card {
+    width:35px;
+ height:35px;
+   
+}
+h1
+{
+      font-size:12px;
+}
+.moves{
+    font-size:12px;
+}
+.timer{
+    font-size:12px;
+}
+.restart
+{
+    font-size:12px;
+
+
+}
+.stars
+{
+
+    font-size:12px;
+}
+.movecolor
+{
+    font-size:12px;
+}
+.deck .card.show {
+    font-size: 16px;
+}
+
+.deck .card.match {
+    
+    font-size:16px;
+}
+
+}
+@media screen and (min-width: 401px) and (max-width: 799px) {
+
+    .deck {
+        width:400px;
+        height:420px;
+}
+.deck .card {
+    width:70px;
+ height:70px;
+   
+}
+h1
+{
+      font-size:14px;
+}
+.moves{
+    font-size:14px;
+}
+.timer{
+    font-size:14px;
+}
+.restart
+{
+    font-size:14px;
+
+}
+.stars
+{
+
+    font-size:14px;
+}
+.movecolor
+{
+    font-size:14px;
+}
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    
+    font-size: 33px;
+}
+
+}
+@media screen and (min-width:800px) {
+
+    .deck {
+        width:660px;
+        height:600px;
+}
+.deck .card {
+
+    width:120px;
+    height:120px;
+   
+
+}
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    
+    font-size: 33px;
+}
+
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/pinkdust.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    width: 100%;
+     display: flex;
+  flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color:#4df1f7;
+    width: 100%;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+  
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+.moves{
+    color:#4df1f7;
+    max-width: 100%;
+}
+.timer{
+    color:#4df1f7;
+    max-width: 100%;
+}
+.movecolor{
+    color:#4df1f7;
+    max-width: 100%;
+}
+.deck .card {
+    
+    
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    
+    background: #02b3e4;
+    cursor: default;
+    animation-name: flipcard;
+    animation-duration: 1s;
+    
+}
+
+/*.deck .card.show {
+    font-size: 33px;
+}*/
+
+.deck .card.match {
+    cursor: default;
+    background: #02cc8c;
+    animation: shake 0.5s;
+    
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: center;
+    width: 345px;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    max-width: 100%;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+     color:#4df1f7;
+}
+
+.restart {
+    float: right;
+     max-width: 100%;
+    cursor: pointer;
+      color:#4df1f7;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+     text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.winningcontent{
+    font-size: 20px;
+}
+.button{
+
+    background-color: #4df1f7;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto;
+    cursor: pointer;
+}
+@keyframes flipcard {
+    0%{
+        -webkit-transform: rotateX(-90deg); /* Safari */
+        transform: rotateX(-90deg);
+}
+    
+    100% {
+        -webkit-transform: rotateX(0deg); /* Safari */
+         transform: rotateX(0deg);
+     }
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
