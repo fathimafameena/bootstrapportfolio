@@ -3,11 +3,15 @@
 <head>
 <meta charset="UTF-8" lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
+  body{
+  	font-family: 'Lobster';
+  }
 #header{
 
 	background-color:#343a3c;
@@ -15,13 +19,18 @@
 	opacity:0.5;
 
 }
+#myprojects{
+
+	
+	margin-top: 10px;
+}
 #mainimage{
 
 	opacity:0.8;
 }
 #Aboutme{
 
-	text-decoration:underline;
+	margin-bottom:10px;
 }
 p{
 
@@ -29,15 +38,27 @@ p{
 }
 .navbar{
 	margin-bottom:0px !important;
+
 }
-main{
-	background-color:#343a3c;
-}
+
+
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 70%;
       margin: auto;
   }
+  .stars{
+
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    font-size: 30px;
+}
+.space{
+	margin-bottom: 10px;
+}
 </style>
 </head>
 <body>
@@ -54,7 +75,7 @@ main{
 <hr>
 </div>
 </header>
-<nav class="navbar navbar-inverse">
+<nav id="navbarfixed" class="navbar navbar-inverse fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -62,7 +83,7 @@ main{
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Portfolio</a>
+      <a class="navbar-brand" href="#myprojects">Portfolio</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -124,16 +145,83 @@ main{
   </div>
 </div>
 </main>
-<div class="container-fluid">
+<section>
+	<article id="about">
+	<div class="container-fluid">
 
 	<div class="row">
 		<div class="col-sm-12">
 
-			<h3 id="Aboutme"class="text-center">About me</h3>
-			<p>Hi,Front End Development is building out the visual components of a website. Using HTML, CSS , and Javascript, I build fast, interactive and Responsive Websites.I am so passionate for developing websites.I Live in Dallas ,Texas. When not found online ,u will find me cooking new recipes for the family and playing with my kids.</p>
+			<h3 id="Aboutme"class="text-center well">About me</h3>
+			<p>Hi,Front End Development is building out the visual components of a website. Using HTML5, CSS frameworks , and Javascript, I build fast, interactive and Responsive Websites.I am so passionate for developing websites.I Live in Dallas ,Texas. When not found online ,u will find me cooking new recipes for the family and playing with my kids.</p>
 		</div>
 	</div>
 	</div>
-	
+</article>
+<article id="myprojects">
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-sm-12 ">
+	<h3 class="text-center well">My Projects</h3>
+</div>
+</div>
+	<div class="row">
+
+<div class="col-sm-4 space">
+	<a href="#"><img class="img-responsive img-circle" src="images/memorygame.jpeg" alt="memory game"></a>
+					<h3 class="text-center">  Matching Game</h3>
+</div>
+<div class="col-sm-4 space">
+	<a href="#"><img class="img-responsive img-circle" src="images/classicgame.jpeg" alt="classic game"></a>
+					<h3 class="text-center"> Arcade Game</h3>
+</div>
+<div class="col-sm-4 space">
+	<a href="#"><img class="img-responsive img-circle" src="images/review.jpeg" alt="Restaurant review"></a>
+					<h3 class="text-center">Restaurant Review</h3>
+</div>
+<div class="col-sm-4 space">
+	<img class="img-responsive img-circle" src="images/memorygame.jpeg" alt="FeedReader Testing">
+					<h3 class="text-center">FeedReader Testing</h3>
+</div>
+<div class="col-sm-4 space">
+	<a href="#"><img class="img-responsive img-circle" src="images/classicgame.jpeg" alt="WeightTracker Chart"></a>
+					<h3 class="text-center">Weight Tracker chart</h3>
+</div>
+<div class="col-sm-4 space">
+	<a href="#"><img class="img-responsive img-circle" src="images/review.jpeg" alt="Simple Quiz"></a>
+					<h3 class="text-center">Simple Quiz</h3>
+</div>
+	</div>
+</div>
+
+
+
+	</article>
+</section>
+	<footer>
+        <div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+					<h3 class="text-center">CONTACT<h3>
+						<ul class="stars">
+					<li><a href="#"><i class="fa fa-facebook-official blue" aria-hidden="true"></i></a></li>
+					 <li><a href="#"><i class="fa fa-twitter blue"></i></a></li>
+					<li> <a href="#"><i class="fa fa-linkedin blue" aria-hidden="true"></i></a></li>
+					 <li><a href="https://github.com/fathimafameena"><i class="fa fa-github black" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<hr>
+	 	<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-center">@copyright fathimafameena 2018</p>
+					</div>
+				</div>
+				
+		</div>
+</footer>
 </body>
 </html>
