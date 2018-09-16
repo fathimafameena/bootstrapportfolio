@@ -15,6 +15,29 @@
 	opacity:0.5;
 
 }
+#mainimage{
+
+	opacity:0.8;
+}
+#Aboutme{
+
+	text-decoration:underline;
+}
+p{
+
+	font-size: 16px;
+}
+.navbar{
+	margin-bottom:0px !important;
+}
+main{
+	background-color:#343a3c;
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
 </style>
 </head>
 <body>
@@ -24,8 +47,8 @@
 <div class="col-xs-4">
 </div>
 <div class="col-xs-8">
-<h2 class="text-center">FATHIMA FAMEENA</h2>
-<h4 class="text-center">front end web developer</h4>
+<h2 class="text-right">FATHIMA FAMEENA</h2>
+<h4 class="text-right">front end web developer</h4>
 </div>
 </div>
 <hr>
@@ -52,11 +75,65 @@
             <li><a href="#">sample Portfolio Page</a></li>
           </ul>
         </li>
-        <li><a href="#">About Me</a></li>
+        <li><a href="#Aboutme">About Me</a></li>
         <li><a href="#">Contact me</a></li>
       </ul>
     </div>
   </div>
 </nav>
+<main>
+<div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <img src="images/mainimage1.jpg" class="img-responsive"alt="Chania">
+        <div class="carousel-caption">
+          <h3>Elegant</h3>
+          <p>As Elegant as a Rainbow</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="images/mainimage.jpg" class="img-responsive" alt="Chania">
+        <div class="carousel-caption">
+          <h3>Simple</h3>
+          <p>The more Simple the more Powerful</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+</main>
+<div class="container-fluid">
+
+	<div class="row">
+		<div class="col-sm-12">
+
+			<h3 id="Aboutme"class="text-center">About me</h3>
+			<p>Hi,Front End Development is building out the visual components of a website. Using HTML, CSS , and Javascript, I build fast, interactive and Responsive Websites.I am so passionate for developing websites.I Live in Dallas ,Texas. When not found online ,u will find me cooking new recipes for the family and playing with my kids.</p>
+		</div>
+	</div>
+	</div>
+	
 </body>
 </html>
